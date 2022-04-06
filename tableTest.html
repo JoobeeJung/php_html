@@ -1,0 +1,26 @@
+<div class="row">
+    <div class="col">
+        <table class="table">
+            <tr>
+                <td>국민</td>
+                <td>은행</td>
+                <td>KBstar</td>
+            </tr>
+            <tr>
+                <td>KB</td>
+                <td>DIGI</td>
+                <td>Campus</td>
+            </tr>
+        </table>        
+    </div>
+</div>
+
+<script>
+    $(document).ready(function() {
+        $("td").addClass("text-center");
+        $("td").click(function(){
+            $("td").removeClass("bg-danger text-white");
+            $(this).toggleClass("bg-danger text-white");
+        });
+    });
+</script>

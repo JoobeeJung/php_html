@@ -1,0 +1,8 @@
+SELECT a.name as '이름', a.birth as '생년월일', b.start as '계약개시일', d.pname as '보험상품명', c.day as '사고일', c.payment as '보험지급금'
+            FROM (SELECT * from kb_accident ORDER BY kb_accident.payment desc limit 10) as c, 
+            	  kb_customer as a, 
+                  kb_contact as b, 
+                  kb_product as d
+            WHERE a.idx = b.cidx 
+            	  and c.contactidx = b.idx 
+                  and d.idx = b.pidx;
